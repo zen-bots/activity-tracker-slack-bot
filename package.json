@@ -1,0 +1,35 @@
+{
+  "name": "activity-tracker-slack-bot",
+  "version": "1.0.0",
+  "description": "AT is your activity partner to increase engagement in your team",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zen-bots/activity-tracker-slack-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zen-bots/activity-tracker-slack-bot/issues"
+  },
+  "homepage": "https://github.com/zen-bots/activity-tracker-slack-bot#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "pg": "^8.8.0",
+    "string-tokenizer": "0.0.8"
+  },
+  "engines": {
+    "node": "^18.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
