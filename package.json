@@ -1,7 +1,7 @@
 {
   "name": "activity-tracker-slack-bot",
   "version": "1.0.0",
-  "description": "AT is your activity partner to increase engagement in your team",
+  "description": "aT is your activity partner to increase engagement in your team",
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
