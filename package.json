@@ -4,8 +4,11 @@
   "description": "aT is your activity partner to increase engagement in your team",
   "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js",
-    "dev": "nodemon src/app.js",
+    "start": "npm run build && node src/app.js",
+    "dev": "concurrently \"nodemon src/app.js\" \"npm run tailwind:watch\"",
+    "build": "npm run tailwind",
+    "tailwind": "npx tailwindcss -i tailwind.css -o src/public/css/style.css",
+    "tailwind:watch": "npx tailwindcss -i tailwind.css -o src/public/css/style.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +26,7 @@
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
+    "nodemailer": "^6.8.0",
     "pg": "^8.8.0",
     "string-tokenizer": "0.0.8"
   },
@@ -30,6 +34,10 @@
     "node": "^18.12.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "autoprefixer": "^10.4.13",
+    "concurrently": "^7.5.0",
+    "nodemon": "^2.0.20",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.2.3"
   }
 }

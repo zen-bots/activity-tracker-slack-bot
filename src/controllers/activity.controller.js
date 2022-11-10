@@ -1,5 +1,5 @@
 const pool = require('../db/instance')
-const handleResponse = require('../responseHandler')
+const handleResponse = require('../helpers/responseHandler')
 const UserService = require("../services/UserService");
 const ActivityService = require("../services/ActivityService");
 const UserActivityService = require("../services/UserActivityService");
@@ -16,8 +16,7 @@ const save = async (req, res) => {
    })
    */
 
-    const { body } = req
-    const { command, user_id, user_name } = body;
+    const { command, user_id, user_name } = req.body;
     const { time } = res.locals;
 
     console.log('We are running.')

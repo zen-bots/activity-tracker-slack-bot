@@ -3,21 +3,48 @@
 <html>
 
 <head>
-    <title><%= title %></title>
+    <title>
+        <%= title %>
+    </title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
 </head>
 
 <body>
     <div style="margin:100px;">
         <div class="jumbotron" style="padding:40px;">
-            <img src="/img/logo.png" alt="teamQ-Logo" style="max-width:100px;max-height:100px"/>
+            <img src="/img/logo.png" alt="teamQ-Logo" style="max-width:100px;max-height:100px" />
             <h1>Hello, world!</h1>
             <p>My name is AT. You can track your activities to increase the engagement among colleagues!</p>
             <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
         </div>
+    </div>
+    <div style="margin:100px;">
+        <h1 class="text-2xl font-semibold">Contact</h1>
+        <form id="contact" class="w-full p-2 flex flex-col md:w-2/3 gap-2 lg:w-1/2" autocomplete="off">
+            <input type="text" name="name" id="name" placeholder="eg: John Smith" required
+                class="py-1 px-2 border border-black rounded" />
+            <input type="email" name="email" id="email" placeholder="example@gmail.com" required
+                class="py-1 px-2 border border-black rounded" />
+            <textarea name="message" id="message" placeholder="Hey! Let's get in touch, I want to..." required
+                class="py-1 px-2 border border-black rounded resize-y"></textarea>
+            <button type="submit"
+                class="bg-blue-500 py-2 px-1 rounded text-md w-fit mx-auto font-semibold text-white hover:bg-opacity-100 bg-opacity-80">
+                Get in Touch! </button>
+        </form>
+        <div id="success" class="hidden text-md font-semibold"> You've successfully contacted me, I'll get back to you
+            soon!
+        </div>
+        <div id="error" class="hidden text-md font-semibold flex-col items-center justify-center">
+            <p>Oops! There's some error while sending me the contact details.</p>
+            <button class="bg-blue-500 py-2 px-1 rounded w-fit mx-auto text-white bg-opacity-80 hover:bg-opacity-100"
+                onclick="javascript:window.location.reload();">Try again</button>
+        </div>
+        <div id="loading" class="hidden text-md font-semibold">Your Submission is being sent...</div>
+        <script src="/js/script.js"></script>
     </div>
 </body>
 
