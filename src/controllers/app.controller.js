@@ -1,3 +1,5 @@
+const mailSender = require("../helpers/mail")
+
 /* GET home page. */
 const landing = (req, res) => {
     res.render('landing', { title: 'teamQ-Use queue to manage you internal resources' })
@@ -12,10 +14,10 @@ const email = (req, res) => {
 /* POST email form request */
 const postEmail = async (req, res) => {
     // Collecting required information from the Request Body
-    const { name, email, message } = req.body;
+    const { name, email, message } = req.body
     try {
         // Sending the email
-        // await sendContactEmail({ to: email, name, message });
+        await mailSender.sendContactEmail({ to: email, name, message })
         res
             .status(200)
             .json({

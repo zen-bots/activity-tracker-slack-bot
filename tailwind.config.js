@@ -1,8 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/views/email.ejs"],
+  content: ["./src/views/landing.ejs"],
   theme: {
     extend: {},
+    fontFamily: {
+      sans: ['Roboto', 'sans-serif'],
+    }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
 }

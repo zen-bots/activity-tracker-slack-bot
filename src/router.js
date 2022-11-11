@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-const { landing, email } = require('./controllers/app.controller')
+const { landing, email, postEmail } = require('./controllers/app.controller')
 const { save, leaderboard, mostActiveActivityOfUser } = require('./controllers/activity.controller')
 const { validate, validateTime } = require('./helpers/validator')
 
@@ -11,6 +11,6 @@ router.post('/save', validateTime, save);
 router.post('/leaderboard', validate, leaderboard);
 router.post('/mostactiveacitiviesofusers', validate, mostActiveActivityOfUser);
 
-router.post('/email', email);
+router.post('/email', postEmail);
 
 module.exports = router;

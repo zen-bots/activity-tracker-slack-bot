@@ -23,7 +23,9 @@ const transport = nodemailer.createTransport({
 * @param {string} options.subject
 * @param {string} options.message
 */
-exports.sendContactEmail = ({ to, name, message }) => {
+exports.sendContactEmail = ({ to, name, message }) => {    
+    name = name || "No-Name"
+    message = message || "No-Message"
     const mailOptionsToOwner = {
         to: email,
         subject: `Contact Form Submission from ${name} <${to}>`,
