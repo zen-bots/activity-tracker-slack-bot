@@ -1,18 +1,20 @@
 <form id="email" class="w-full flex flex-col md:w-2/3 gap-2 lg:w-1/2" autocomplete="off">
     <input type="email" name="email" id="email" placeholder="example@gmail.com" required
-        class="py-1 px-2 border border-black rounded" />
+        class="py-1 px-2 border border-black rounded" value="asfddfs@gmail.com" />
     <button type="submit"
         class="w-full lg:w-max px-4 py-3 bg-emerald-500 hover:bg-emerald-600 hover:cursor-pointer text-white font-medium rounded lg:mr-8 mb-4 lg:mb-0">
         Let's Get Started
     </button>
 </form>
-<div id="success" class="hidden text-md font-semibold"> You've successfully contacted me, I'll get back to you
+<div id="success" class="hidden text-md text-emerald-400"> You've successfully contacted me, I'll get back to you
     soon!
 </div>
-<div id="error" class="hidden text-md font-semibold flex-col items-center justify-center">
-    <p>Oops! There's some error while sending me the contact details.</p>
-    <button class="bg-blue-500 py-2 px-1 rounded w-fit mx-auto text-white bg-opacity-80 hover:bg-opacity-100"
-        onclick="javascript:window.location.reload();">Try again</button>
+<div id="error" class="hidden text-md flex-col text-red-400">
+    <p>Oops! There's some error while sending the contact details.</p>
+    <button onclick="javascript:window.location.reload();"
+        class="w-full lg:w-max px-4 py-3 bg-emerald-500 hover:bg-emerald-600 hover:cursor-pointer text-white font-medium rounded lg:mr-8 mb-4 lg:mb-0">
+        Try again
+    </button>
 </div>
-<div id="loading" class="hidden text-md font-semibold">Your Submission is being sent...</div>
+<div id="loading" class="hidden text-md text-gray-400">Email is being sent...</div>
 <script src="/js/forms/email.js"></script>

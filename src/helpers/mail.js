@@ -1,11 +1,8 @@
-/** mail.js
-* Node Mailer Setup
-*/
-
 // Dependencies
 const nodemailer = require('nodemailer')
 const email = process.env.MAIL_EMAIL
 const password = process.env.MAIL_PASSWORD
+
 // Mail Transporter
 const transport = nodemailer.createTransport({
     service: 'gmail',
@@ -13,7 +10,7 @@ const transport = nodemailer.createTransport({
         user: email,
         pass: password,
     },
-    from: 'Kunal Keshan <example@gmail.com>'
+    from: 'Ozenc Celik <example@gmail.com>'
 })
 
 /**
@@ -23,15 +20,16 @@ const transport = nodemailer.createTransport({
 * @param {string} options.subject
 * @param {string} options.message
 */
-exports.sendContactEmail = ({ to, name, message }) => {    
+exports.sendContactEmail = ({ to, name, message }) => {
     name = name || "No-Name"
     message = message || "No-Message"
+
     const mailOptionsToOwner = {
         to: email,
         subject: `Contact Form Submission from ${name} <${to}>`,
         html: `
             <h1>Contact Form Submission</h1>
-            <p>Name: ${name} <${to}></p>
+            <p>${name} <${to}></p>
             <p>${message}</p>
         `
     }
