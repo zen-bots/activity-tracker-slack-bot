@@ -7,7 +7,18 @@ module.exports = {
       sans: ['Roboto', 'sans-serif'],
     }
   },
-  plugins: [
-    require('@tailwindcss/forms')
-  ],
+
+  plugins: [require("daisyui")],
+
+  // daisyUI config (optional)
+  daisyui: {
+    styled: true,
+    themes: true,
+    base: true,
+    utils: true,
+    logs: true,
+    rtl: false,
+    prefix: "",
+    darkTheme: "dark",
+  }
 }

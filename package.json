@@ -22,8 +22,7 @@
   },
   "homepage": "https://github.com/zen-bots/activity-tracker-slack-bot#readme",
   "dependencies": {
-    "@sendgrid/mail": "^7.7.0",
-    "@tailwindcss/forms": "^0.5.3",
+    "daisyui": "^2.39.1",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
@@ -38,7 +37,6 @@
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "concurrently": "^7.5.0",
-    "nodemon": "^2.0.20",
-    "postcss": "^8.4.18"
+    "nodemon": "^2.0.20"
   }
 }
