@@ -11,6 +11,7 @@ const postEmail = async (req, res) => {
     const { name, email, message } = req.body
     try {
         // Sending the email
+        //await delay(2000)
         await mailSender.sendContactEmail({ to: email, name, message })
         res.status(200)
             .json({
@@ -28,6 +29,11 @@ const postEmail = async (req, res) => {
             })
     }
 
+}
+
+function delay(time) {
+    //return setTimeout(resolve, time)
+    return new Promise(resolve => setTimeout(resolve, time))
 }
 
 module.exports = {

@@ -1,20 +1,23 @@
+<!-- email form -->
 <form id="email" class="w-full flex flex-col md:w-2/3 gap-2 lg:w-1/2" autocomplete="off">
-    <input type="email" name="email" id="email" placeholder="example@gmail.com" required
-        class="py-1 px-2 border border-black rounded" value="asfddfs@gmail.com" />
-    <button type="submit"
-        class="w-full lg:w-max px-4 py-3 bg-emerald-500 hover:bg-emerald-600 hover:cursor-pointer text-white font-medium rounded lg:mr-8 mb-4 lg:mb-0">
-        Let's Get Started
-    </button>
+    <div class="form-control">
+        <label class="input-group">
+            <input type="email" name="email" id="email" placeholder="info@site.com" class="input input-bordered"
+                required value="info@site.com" />
+            <button id="submit" type="submit" class="btn btn-primary">Join our waitlist!</button>
+        </label>
+    </div>
 </form>
-<div id="success" class="hidden text-md text-emerald-400"> You've successfully contacted me, I'll get back to you
-    soon!
+
+<!-- success block -->
+<div id="success" class="hidden text-success"> You've contacted successfully, We'll get back to you
+    soon 📧
 </div>
-<div id="error" class="hidden text-md flex-col text-red-400">
-    <p>Oops! There's some error while sending the contact details.</p>
-    <button onclick="javascript:window.location.reload();"
-        class="w-full lg:w-max px-4 py-3 bg-emerald-500 hover:bg-emerald-600 hover:cursor-pointer text-white font-medium rounded lg:mr-8 mb-4 lg:mb-0">
-        Try again
-    </button>
+
+<!-- error block -->
+<div id="error" class="hidden text-md">
+    <p>Oops! There's some error while sending the contact details. Try again please.</p>
 </div>
-<div id="loading" class="hidden text-md text-gray-400">Email is being sent...</div>
+
+<!-- import js -->
 <script src="/js/forms/email.js"></script>

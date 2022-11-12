@@ -3,25 +3,25 @@
 */
 
 // Containers
-const emailForm = document.getElementById('email');
-const loading = document.getElementById('loading');
-const success = document.getElementById('success');
-const errorEl = document.getElementById('error');
+const emailForm = document.getElementById('email')
+const success = document.getElementById('success')
+const errorEl = document.getElementById('error')
+const submitButton = document.getElementById('submit')
 
 // Hide Container Function
 const hideAllContainers = () => {
-    emailForm.style.display = 'none';
-    loading.style.display = 'none';
-    success.style.display = 'none';
-    errorEl.style.display = 'none';
+    emailForm.style.display = 'none'
+    success.style.display = 'none'
+    errorEl.style.display = 'none'
 }
 
 // Email Form Submit Handler
 const handleEmailFormSubmit = async (e) => {
     e.preventDefault();
     try {
+        submitButton.classList.add('loading');
         emailForm.classList.add('animate-pulse');
-        loading.style.display = 'block';
+
         const { email } = e.target;
         const body = {
             email: email.value,

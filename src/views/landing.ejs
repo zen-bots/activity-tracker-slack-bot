@@ -7,6 +7,7 @@
     <title>
         <%= title %>
     </title>
+    <link rel="icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/style.css" />
 </head>
 
@@ -17,7 +18,7 @@
             aT
             <div class="avatar pl-3">
                 <div class="w-12 mask mask-squircle">
-                    <img src="/img/running-shoes.png" alt="teamQ-Logo" />
+                    <img src="/img/logo.png" alt="teamQ-Logo" />
                 </div>
             </div>
         </a>
@@ -29,28 +30,24 @@
         <div class="hero-content flex-col lg:flex-row-reverse">
             <img src="https://placeimg.com/360/600/arch" class="max-w-sm rounded-lg shadow-2xl" />
             <div>
-                <h1 class="text-5xl font-bold">Activity Tracker</h1>
+                <h1 class="text-5xl font-bold">Activity Tracker
+                    <div class="avatar">
+                        <div class="w-8 rounded">
+                            <img src="/img/slack.png" alt="Tailwind-CSS-Avatar-component" />
+                        </div>
+                    </div>
+                </h1>
                 <p class="py-6">Activity tracker shortly aT is your activity tracking partner to increase engagement
                     among your colleagues.
                     <br />Yes it's a Slack Bot 🤖
-                    <br />Join waitlist below. We'll inform you when it's live 📧
+                    <br />Join waitlist below. We'll inform you when it's released ⚙️
                 </p>
-
-                <div class="form-control">
-                    <label class="label">
-                        <span class="label-text">Your Email</span>
-                    </label>
-                    <label class="input-group">
-                        <span>Email</span>
-                        <input type="text" placeholder="info@site.com" class="input input-bordered" />
-                    </label>
-
-                    <button class="btn btn-primary">Join our waitlist!</button>
-                </div>
+                <%- include('forms/email') %>
             </div>
         </div>
     </div>
     <!-- main hero banner end -->
+
     <!-- footer start -->
     <footer class="footer footer-center p-10 bg-primary text-primary-content">
         <div>
@@ -61,7 +58,7 @@
                 </path>
             </svg>
             <p class="font-bold">
-                ACME Industries Ltd. <br />Providing reliable tech since 1992
+                Zen Bots <br />Develop bots for your company
             </p>
             <p>Copyright © 2022 - All right reserved</p>
         </div>
@@ -89,7 +86,6 @@
         </div>
     </footer>
     <!-- footer end -->
-    <script src="/js/script.js"></script>
 </body>
 
 </html>
