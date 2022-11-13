@@ -1,8 +1,8 @@
 const mailSender = require("../helpers/mail")
 
 /* GET email page. */
-const email = (req, res) => {
-    res.render('email', { title: 'teamQ-Use queue to manage you internal resources' })
+const contact = (req, res) => {
+    res.render('contact', { title: 'Contact us' })
 }
 
 /* POST email form request */
@@ -37,6 +37,6 @@ function delay(time) {
 }
 
 module.exports = {
-    email,
+    contact,
     postEmail
 }

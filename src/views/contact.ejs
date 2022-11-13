@@ -24,62 +24,59 @@
                 </div>
             </a>
         </div>
-        <div class="flex-none">
-            <ul class="menu menu-horizontal p-0">
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </div>
     </div>
     <!-- nav bar end -->
 
     <!-- main hero banner start -->
-    <div class="hero min-h-screen bg-base-200">
-        <div class="hero-content flex-col lg:flex-row-reverse">
-            <ul class="steps steps-vertical">
-                <li class="step step-primary">
-                    <div class="mockup-window  bg-base-300">
-                        <img src="/img/product/1.png" class="max-w-sm rounded-lg ">
-                        <span>Add your activity 🏃‍♂️</span>
-                        </img>
+    <!-- email form -->
+    <form id="contact" autocomplete="off">
+        <div class="hero min-h-screen bg-base-200">
+            <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div class="card-body">
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Name</span>
+                        </label>
+                        <input id="name" type="text" placeholder="Thomas R. Toe" class="input input-bordered input-md"
+                            required />
                     </div>
-                </li>
-                <li class="step step-primary">
-                    <div class="mockup-window bg-base-300">
-                        <img src="/img/product/2.png" class="max-w-sm rounded-lg">
-                        <span>View leaderboard 🏆</span>
-                        </img>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Email</span>
+                        </label>
+                        <input id="email" type="email" placeholder="info@site.com" class="input input-bordered input-md"
+                            required />
                     </div>
-                </li>
-                <li class="step">
-                    <div class="mockup-window bg-base-300">
-                        <img src="/img/product/3.png" class="max-w-sm rounded-lg">
-                        <span>Increase engagement 🎉</span>
-                        </img>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Message</span>
+                        </label>
+                        <textarea id="message" class="textarea textarea-bordered" placeholder="Give us feedback!"
+                            required></textarea>
                     </div>
-                </li>
-            </ul>
+                    <div class="form-control mt-6">
+                        <button id="submit" type="submit" class="btn btn-primary">Contact us!</button>
+                    </div>
 
-            <div>
-                <h1 class="text-5xl font-bold">Activity Tracker
-                    <div class="avatar">
-                        <div class="w-8 rounded">
-                            <img src="/img/slack.png" alt="Tailwind-CSS-Avatar-component" />
-                        </div>
+                    <!-- success block -->
+                    <div id="success" class="hidden text-md"> You've contacted successfully, We'll get back to you
+                        soon 📧
                     </div>
-                </h1>
-                <p class="py-6">Activity tracker shortly aT is your activity tracking partner to increase engagement
-                    among your colleagues.
-                    <br />Yes it's a Slack Bot 🤖
-                    <br />Join waitlist below. We'll inform you when it's released ⚙️
-                </p>
-                <%- include('forms/email') %>
+
+                    <!-- error block -->
+                    <div id="error" class="hidden text-md">
+                        <p>Oops! There's some error while sending the contact details. Try again please.</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
+
+    <!-- import js -->
+    <script src="/js/forms/contact.js"></script>
     <!-- main hero banner end -->
 
     <!-- footer start -->
-
     <footer class="footer footer-center p-10 bg-primary text-primary-content">
         <div>
             <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
