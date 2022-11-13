@@ -12,9 +12,10 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(require('./router'))
+app.use(require('./helpers/activeKeeper'))
 
 // Start the server
 app.listen(process.env.PORT, () => {
-    console.log(`App listening on port ${process.env.PORT}`);
-    console.log('Press Ctrl+C to quit.');
+    console.log(`App listening on port ${process.env.PORT}`)
+    console.log('Press Ctrl+C to quit.')
 });
